@@ -1,0 +1,52 @@
+body {
+    width: 60em;
+    margin: 0 auto;
+  }
+  
+  section {
+    padding: 2em;
+    margin: 1em;
+  }
+  
+  #green {
+    background-color: #8ffda7;
+    grid-area: 1 / 1 / 2 / 7;
+  }
+  
+  #orange {
+    background-color: #ffc788;
+    grid-area: 2 / 3 / 3 / 5;
+  }
+  
+  #yellow {
+    background-color: #ffff92;
+    grid-area: 2 / 1 / 4 / 3;
+  }
+  
+  #red {
+    background-color: #ff919c;
+    grid-area: 2 / 5 / 4 / 7;
+  }
+  
+  #blue {
+    background-color: #98d2ff;
+    grid-area: 3 / 3 / 4 / 5;
+  }
+  
+  ul {
+    padding: 0;
+  }
+  
+  li {
+    background-color: white;
+    padding: 1em;
+    display: block;
+    margin: 1em;
+  }
+  
+  .grid-container {
+    display:grid;
+    grid-template-columns: repeat(6, auto) ;
+    grid-template-rows: auto auto auto;
+  }
+  
