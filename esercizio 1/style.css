@@ -1,0 +1,15 @@
+:root {
+    --green: #49a662;
+    --pink: #e6aca1;
+}
+
+body {
+    background-color: var(--green);
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: var(--pink);
+    border-radius: 50px;
+}
