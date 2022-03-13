@@ -2,22 +2,41 @@ body {
 	font-family: monospace;
 }
 
-#expand-toggle {
-	display: none;
+.show-rows {
+    display: block;
+}
+#expand-toggle:checked ~ #expand-btn .show-rows {
+    display: none;
+}
+.hide-rows {
+    display: none;
+}
+#expand-toggle:checked ~ #expand-btn .hide-rows {
+    display: block;
 }
 
 .expandable {
-	visibility: collapse;
-	background: gray;
-	color: white;
+    visibility: collapse;
+    background: gray;
+    color: white;
 }
 
 #expand-btn {
-	display: inline-block;
-	margin-top: 12px;
-	padding: 6px 12px;
-	background-color: #ff8888;
-	border: 1px solid;
-	border-radius: 3px;
-	transition: 0.3s;
-} 
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    background-color: #ff8888;
+    border: 1px solid;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+#expand-toggle {
+    display: none;
+}
+#expand-toggle:checked ~ #expand-btn {
+    background-color: #88ff88;
+}
+#expand-toggle:checked + table .expandable {
+    visibility: visible;
+}

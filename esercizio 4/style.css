@@ -1,51 +1,64 @@
-.calcolatrice {
-    border:2px solid black;
-    border-radius:20px;
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 110px;
-    grid-template-areas:
-    "display display display display"
-    "operatoreuno operatoredue operatoretre operatorequattro"
-    "element7 element8 element9 operatorecinque"
-    "element4 element5 element6 operatorecinque"
-    "element1 element2 element3 operatorecinque"
-    "element0 element. elementAC operatorecinque";
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.calcolatrice {
+    display: grid;
+    grid-template-areas:
+        "display     display      display      display"
+        "operator   operator    operator    operator"
+        "element    element     element     uguale"
+        "element    element     element     uguale"
+        "element    element     element     uguale"
+        "element    element    element     uguale";
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.2);
 }
 
 .element {
-    border:1px solid black;
-    grid-area: element;
+    font-size: 25px;
+    font-weight: 700;
+    width: 90px;
+    height: 70px;
+    background-color: #eef1f4;
+    border-top: 2px solid #889bab;
+    border-right: 2px solid #889bab;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.display {
-    border: 1px solid black;
+.element-display {
+    font-size: 35px;
+    width: 100%;
+    padding-right: 15px;
+    background-color: #444d52;
+    color: #eef1f4;
+    border: none;
+
     grid-area: display;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.operatoreuno {
-    grid-area: operatoreuno;
-    border:1px solid black;
+.element-operator {
+    border-top: none;
+    background-color: #d1dbe2;
+}
+.element-operator:nth-child(5) {
+    border-right: none;
 }
 
-.operatoredue {
-    grid-area: operatoredue;
-    border:1px solid black;
-}
+.element-uguale {
+    height: 100%;
+    background-color: #f46d77;
+    border-right: none;
 
-.operatoretre {
-    border:1px solid black;
-    grid-area: operatoretre;
+    grid-area: uguale;
+    display: flex;
+    align-items:center;
 }
-
-.operatorequattro {
-    grid-area: operatorequattro;
-    border:1px solid black;
-}
-
-.operatorecinque {
-    grid-area: operatorecinque;
-    border:1px solid black;
-}
-
